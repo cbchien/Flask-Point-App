@@ -1,0 +1,331 @@
+[2018-Jul-20 15:35], 127.0.0.1, GET, http, /?, 404 NOT FOUND, AnonymousUser, Client error
+[2018-Jul-20 15:35], 127.0.0.1, GET, http, /profile?, 200 OK, AnonymousUser, Undefined message
+[2018-Jul-20 16:07], 127.0.0.1, GET, http, /api/point/1?, 200 OK, AnonymousUser, Undefined message
+[2018-Jul-20 16:07], 127.0.0.1, GET, http, /api/point/?, 404 NOT FOUND, AnonymousUser, Client error
+[2018-Jul-20 16:09], 127.0.0.1, GET, http, /api/point/1?, 200 OK, AnonymousUser, Undefined message
+[2018-Jul-20 16:18], 127.0.0.1, GET, http, /api/point?, 404 NOT FOUND, AnonymousUser, Client error
+[2018-Jul-20 16:20], 127.0.0.1, GET, http, /api/point?, 200 OK, AnonymousUser, Undefined message
+[2018-Jul-20 16:21], 127.0.0.1, GET, http, /api/point?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 16:21], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 16:27], 127.0.0.1, POST, http, /api/point/1/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 16:37], 127.0.0.1, POST, http, /api/pointlog/1?, 405 METHOD NOT ALLOWED, tom@ggmail.com, The method is not allowed for the requested URL.
+[2018-Jul-20 16:37], 127.0.0.1, GET, http, /api/pointlog/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 16:40], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-20 16:52], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 16:53], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 16:56], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 16:56], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 16:57], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 16:59], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:00], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:00], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:01], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:01], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:02], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:02], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:04], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:06], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:10], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:11], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:13], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:13], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:13], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:13], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:13], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:13], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:18], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:23], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:23], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:23], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:23], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:23], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:24], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:26], 127.0.0.1, POST, http, /api/point/3?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:26], 127.0.0.1, POST, http, /api/point/3?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:26], 127.0.0.1, POST, http, /api/point/2?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:26], 127.0.0.1, POST, http, /api/point/3?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:31], 127.0.0.1, POST, http, /api/point/2?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:31], 127.0.0.1, POST, http, /api/point/3?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:31], 127.0.0.1, POST, http, /api/point/3?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:32], 127.0.0.1, POST, http, /api/point/3?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:32], 127.0.0.1, POST, http, /api/point/2?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:33], 127.0.0.1, POST, http, /api/point/2?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:33], 127.0.0.1, POST, http, /api/point/2?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:33], 127.0.0.1, POST, http, /api/point/2?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:37], 127.0.0.1, POST, http, /api/point/2?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:37], 127.0.0.1, POST, http, /api/point/2?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:37], 127.0.0.1, POST, http, /api/point/2?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:37], 127.0.0.1, POST, http, /api/point/3?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:37], 127.0.0.1, POST, http, /api/point/3?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:37], 127.0.0.1, POST, http, /api/point/3?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:37], 127.0.0.1, POST, http, /api/point/3?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:38], 127.0.0.1, POST, http, /api/point/3?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:40], 127.0.0.1, GET, http, /api/point?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:41], 127.0.0.1, GET, http, /api/point?, 200 OK, tom@ggmail.com, Get points information for tom@ggmail.com
+[2018-Jul-20 17:42], 127.0.0.1, POST, http, /api/point/2?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 17:44], 127.0.0.1, POST, http, /api/point/2?, 200 OK, tom@ggmail.com, Update with point type attend_course 25 points for current user email tom@ggmail.com with total points 95
+[2018-Jul-20 17:53], 127.0.0.1, GET, http, /api/admin/point/1?, 200 OK, tom@ggmail.com, Get points information for tom@ggmail.com
+[2018-Jul-20 17:53], 127.0.0.1, GET, http, /api/admin/point/2?, 200 OK, tom@ggmail.com, Get points information for tom@ggmail.com
+[2018-Jul-20 17:53], 127.0.0.1, GET, http, /api/admin/point/2?, 200 OK, tom@ggmail.com, Get points information for tina@ggmail.com
+[2018-Jul-20 17:56], 127.0.0.1, GET, http, /api/admin/point/2/1?, 405 METHOD NOT ALLOWED, tom@ggmail.com, The method is not allowed for the requested URL.
+[2018-Jul-20 17:56], 127.0.0.1, POST, http, /api/admin/point/2/1?, 200 OK, tom@ggmail.com, Update with point type daily_login 5 points for user tina@ggmail.com with total points 65
+[2018-Jul-20 17:56], 127.0.0.1, POST, http, /api/admin/point/2/1?, 200 OK, tom@ggmail.com, Update with point type daily_login 5 points for user tina@ggmail.com with total points 70
+[2018-Jul-20 17:56], 127.0.0.1, POST, http, /api/admin/point/2/2?, 200 OK, tom@ggmail.com, Update with point type attend_course 25 points for user tina@ggmail.com with total points 95
+[2018-Jul-20 17:56], 127.0.0.1, POST, http, /api/admin/point/2/2?, 200 OK, tom@ggmail.com, Update with point type attend_course 25 points for user tina@ggmail.com with total points 120
+[2018-Jul-20 17:56], 127.0.0.1, POST, http, /api/admin/point/2/3?, 200 OK, tom@ggmail.com, Update with point type redeem_course -50 points for user tina@ggmail.com with total points 70
+[2018-Jul-20 17:56], 127.0.0.1, POST, http, /api/admin/point/2/3?, 200 OK, tom@ggmail.com, Update with point type redeem_course -50 points for user tina@ggmail.com with total points 20
+[2018-Jul-20 17:56], 127.0.0.1, POST, http, /api/admin/point/2/3?, 200 OK, tom@ggmail.com, Not enough points for tina@ggmail.com
+[2018-Jul-20 18:02], 127.0.0.1, POST, http, /api/admin/pointtype/1?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-20 18:03], 127.0.0.1, GET, http, /api/admin/pointtype/1?, 200 OK, tom@ggmail.com, Viewing point type 1 as an admin
+[2018-Jul-23 09:46], 127.0.0.1, GET, http, /api/admin/pointtype/1?, 200 OK, tom@ggmail.com, Viewing point type 1 as an admin
+[2018-Jul-23 09:46], 127.0.0.1, GET, http, /api/admin/pointtype/1?, 200 OK, tom@ggmail.com, Viewing point type 1 as an admin
+[2018-Jul-23 09:47], 127.0.0.1, GET, http, /api/admin/pointtype/999?, 200 OK, tom@ggmail.com, Viewing all point type as an admin
+[2018-Jul-23 09:48], 127.0.0.1, GET, http, /api/admin/pointtype/kk?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-23 09:49], 127.0.0.1, GET, http, /api/admin/pointtype/kk?, 422 UNPROCESSABLE ENTITY, tom@ggmail.com, Please check your point id input
+[2018-Jul-23 09:51], 127.0.0.1, GET, http, /api/admin/pointtype/1?, 422 UNPROCESSABLE ENTITY, tom@ggmail.com, Please check your point id input
+[2018-Jul-23 09:51], 127.0.0.1, GET, http, /api/admin/pointtype/1?, 422 UNPROCESSABLE ENTITY, tom@ggmail.com, Please check your point id input
+[2018-Jul-23 09:51], 127.0.0.1, GET, http, /api/admin/pointtype/3?, 422 UNPROCESSABLE ENTITY, tom@ggmail.com, Please check your point id input
+[2018-Jul-23 09:52], 127.0.0.1, GET, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, Viewing point type 3 as an admin
+[2018-Jul-23 09:54], 127.0.0.1, GET, http, /api/admin/pointtype/0?, 422 UNPROCESSABLE ENTITY, tom@ggmail.com, Please check your point id input
+[2018-Jul-23 09:56], 127.0.0.1, GET, http, /api/admin/pointtype/1999?, 422 UNPROCESSABLE ENTITY, tom@ggmail.com, Please check your point id input
+[2018-Jul-23 09:56], 127.0.0.1, GET, http, /api/admin/pointtype/1999?, 422 UNPROCESSABLE ENTITY, tom@ggmail.com, Please check your point id input
+[2018-Jul-23 09:58], 127.0.0.1, GET, http, /api/admin/pointtype/sdc?, 404 NOT FOUND, tom@ggmail.com, None
+[2018-Jul-23 09:58], 127.0.0.1, GET, http, /api/admin/pointtype/sdc?, 404 NOT FOUND, tom@ggmail.com, invalid literal for int() with base 10: 'sdc'
+[2018-Jul-23 09:59], 127.0.0.1, GET, http, /api/admin/pointtype/sdc?, 404 NOT FOUND, tom@ggmail.com, An error occurred. Please see error message
+[2018-Jul-23 09:59], 127.0.0.1, GET, http, /api/admin/pointtype/sdc?, 404 NOT FOUND, tom@ggmail.com, An error occurred. Please see error message
+[2018-Jul-23 10:00], 127.0.0.1, GET, http, /api/admin/pointtype/2?, 200 OK, tom@ggmail.com, Viewing point type 2 as an admin
+[2018-Jul-23 10:03], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 404 NOT FOUND, tom@ggmail.com, Check header and data
+[2018-Jul-23 10:06], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, None
+[2018-Jul-23 10:06], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, None
+[2018-Jul-23 10:07], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, None
+[2018-Jul-23 10:08], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, Updated 3: test
+[2018-Jul-23 10:10], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, Updated 3: test with ['test', 'test772']
+[2018-Jul-23 10:11], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, Updated 3: test with [{'title': 'test'}, {'description': 'test772'}]
+[2018-Jul-23 10:17], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, Updated 3: test with [{'title': 'test'}, {'description': 'test772'}]
+[2018-Jul-23 10:17], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, Updated 3: test with [{'title': 'test'}, {'description': 'test772'}]
+[2018-Jul-23 10:20], 127.0.0.1, POST, http, /api/admin/pointtype/create?, 404 NOT FOUND, tom@ggmail.com, Client error
+[2018-Jul-23 10:20], 127.0.0.1, POST, http, /api/admin/pointtype/create?, 404 NOT FOUND, tom@ggmail.com, Client error
+[2018-Jul-23 10:21], 127.0.0.1, POST, http, /api/admin/pointtype/create?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-23 10:21], 127.0.0.1, POST, http, /api/admin/pointtype?, 200 OK, tom@ggmail.com, Undefined message
+[2018-Jul-23 10:29], 127.0.0.1, POST, http, /api/admin/pointtype?, 405 METHOD NOT ALLOWED, tom@ggmail.com, The method is not allowed for the requested URL.
+[2018-Jul-23 10:30], 127.0.0.1, GET, http, /api/admin/pointtype?, 200 OK, tom@ggmail.com, Viewing all point type as an admin
+[2018-Jul-23 10:30], 127.0.0.1, GET, http, /api/admin/pointtype/1?, 200 OK, tom@ggmail.com, Viewing point type 1 as an admin
+[2018-Jul-23 10:30], 127.0.0.1, GET, http, /api/admin/pointtype/2?, 200 OK, tom@ggmail.com, Viewing point type 2 as an admin
+[2018-Jul-23 10:30], 127.0.0.1, GET, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, Viewing point type 3 as an admin
+[2018-Jul-23 10:30], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, Updated 3: test44 with [{'title': 'test44'}, {'description': 'test772'}]
+[2018-Jul-23 10:32], 127.0.0.1, GET, http, /api/admin/pointtype?, 200 OK, tom@ggmail.com, Viewing all point type as an admin
+[2018-Jul-23 10:38], 127.0.0.1, POST, http, /api/admin/pointtype?, 422 UNPROCESSABLE ENTITY, tom@ggmail.com, Please make sure you enter all the required input field
+[2018-Jul-23 10:38], 127.0.0.1, POST, http, /api/admin/pointtype?, 422 UNPROCESSABLE ENTITY, tom@ggmail.com, Please make sure you enter all the required input field
+[2018-Jul-23 10:39], 127.0.0.1, POST, http, /api/admin/pointtype?, 422 UNPROCESSABLE ENTITY, tom@ggmail.com, There is an existing point tpye with the same title
+[2018-Jul-23 10:39], 127.0.0.1, POST, http, /api/admin/pointtype?, 404 NOT FOUND, tom@ggmail.com, Check header and data
+[2018-Jul-23 10:40], 127.0.0.1, POST, http, /api/admin/pointtype?, 404 NOT FOUND, tom@ggmail.com, Check header and data
+[2018-Jul-23 10:41], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 10:41], 127.0.0.1, POST, http, /api/admin/pointtype?, 404 NOT FOUND, tom@ggmail.com, Check header and data
+[2018-Jul-23 10:41], 127.0.0.1, POST, http, /api/admin/pointtype?, 404 NOT FOUND, tom@ggmail.com, Check header and data
+[2018-Jul-23 10:42], 127.0.0.1, POST, http, /api/admin/pointtype?, 404 NOT FOUND, tom@ggmail.com, Check header and data
+[2018-Jul-23 10:42], 127.0.0.1, POST, http, /api/admin/pointtype?, 200 OK, tom@ggmail.com, Created test444 80 points for test772
+[2018-Jul-23 10:42], 127.0.0.1, POST, http, /api/admin/pointtype?, 422 UNPROCESSABLE ENTITY, tom@ggmail.com, There is an existing point tpye with the same title
+[2018-Jul-23 10:42], 127.0.0.1, POST, http, /api/admin/pointtype?, 200 OK, tom@ggmail.com, Created test44asc4 80 points for test772
+[2018-Jul-23 10:47], 127.0.0.1, PUT, http, /api/admin/pointtype/5?, 200 OK, tom@ggmail.com, Updated 5: tetc4 with [{'title': 'tetc4'}, {'description': 'test772'}, {'input': '80'}]
+[2018-Jul-23 10:50], 127.0.0.1, PUT, http, /api/admin/pointtype/5?, 200 OK, tom@ggmail.com, Updated 5: tetc4 with [{'title': 'tetc4'}, {'description': 'test772'}, {'input': '80'}]
+[2018-Jul-23 10:55], 127.0.0.1, PUT, http, /api/admin/pointtype/5?, 200 OK, tom@ggmail.com, Updated 5: tetc4 with [{'title': 'tetc4'}, {'description': 'test772'}, {'input': '80'}]
+[2018-Jul-23 10:55], 127.0.0.1, PUT, http, /api/admin/pointtype/5?, 200 OK, tom@ggmail.com, Updated 5: tetc4 with [{'title': 'tetc4'}, {'description': 'test772'}, {'input': '80'}]
+[2018-Jul-23 10:55], 127.0.0.1, PUT, http, /api/admin/pointtype/5?, 200 OK, tom@ggmail.com, Updated 5: tetc4 with [{'title': 'tetc4'}, {'description': 'test772'}, {'input': '80'}]
+[2018-Jul-23 10:56], 127.0.0.1, PUT, http, /api/admin/pointtype/5?, 200 OK, tom@ggmail.com, Updated 5: tetc4 with [{'title': 'tetc4'}, {'description': 'test772'}, {'input': '80'}]
+[2018-Jul-23 10:56], 127.0.0.1, PUT, http, /api/admin/pointtype/5?, 200 OK, tom@ggmail.com, Updated 5: tetc4 with [{'title': 'tetc4'}, {'description': 'test772'}, {'input': '80'}]
+[2018-Jul-23 10:57], 127.0.0.1, PUT, http, /api/admin/pointtype/5?, 200 OK, tom@ggmail.com, Updated 5: tetc4 with [{'title': 'tetc4'}, {'description': 'test772'}]
+[2018-Jul-23 10:58], 127.0.0.1, PUT, http, /api/admin/pointtype/6?, 200 OK, tom@ggmail.com, Updated 6: test44asc4 with [{'title': 'tetc4'}, {'description': 'test772'}]
+[2018-Jul-23 11:00], 127.0.0.1, POST, http, /api/admin/pointtype?, 404 NOT FOUND, tom@ggmail.com, An error occurred. Please see error message
+[2018-Jul-23 11:01], 127.0.0.1, POST, http, /api/admin/pointtype?, 422 UNPROCESSABLE ENTITY, tom@ggmail.com, There is an existing point tpye with the same title
+[2018-Jul-23 11:01], 127.0.0.1, POST, http, /api/admin/pointtype?, 200 OK, tom@ggmail.com, Created sdffsdcdswef 80 points for test772
+[2018-Jul-23 11:01], 127.0.0.1, POST, http, /api/admin/pointtype?, 200 OK, tom@ggmail.com, Created sdffsdfsdfsdcdswef 80 points for test772
+[2018-Jul-23 11:02], 127.0.0.1, POST, http, /api/admin/pointtype?, 404 NOT FOUND, tom@ggmail.com, An error occurred. Please see error message
+[2018-Jul-23 11:03], 127.0.0.1, POST, http, /api/admin/pointtype?, 404 NOT FOUND, tom@ggmail.com, An error occurred. Please see error message
+[2018-Jul-23 11:03], 127.0.0.1, POST, http, /api/admin/pointtype?, 422 UNPROCESSABLE ENTITY, tom@ggmail.com, There is an existing point tpye with the same title
+[2018-Jul-23 11:05], 127.0.0.1, POST, http, /api/admin/pointtype?, 200 OK, tom@ggmail.com, Created sdffccvsdvwef 80 points for test772
+[2018-Jul-23 11:05], 127.0.0.1, POST, http, /api/admin/pointtype?, 200 OK, tom@ggmail.com, Created sdf134ef 80 points for test772
+[2018-Jul-23 11:12], 127.0.0.1, POST, http, /api/admin/point/6/1?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:13], 127.0.0.1, POST, http, /api/admin/point/6/1?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:13], 127.0.0.1, POST, http, /api/admin/point/6/1?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:13], 127.0.0.1, POST, http, /api/admin/point/6/1?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:14], 127.0.0.1, POST, http, /api/admin/point/6/1?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:15], 127.0.0.1, POST, http, /api/admin/point/6/1?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:16], 127.0.0.1, POST, http, /api/admin/point/6/1?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:16], 127.0.0.1, POST, http, /api/admin/point/6/1?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:16], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:16], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:16], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:20], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:20], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:21], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:22], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:23], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:24], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:24], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:26], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:26], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:27], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:27], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:27], 127.0.0.1, POST, http, /api/admin/point/6/2?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:30], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, Update with point type attend_course 25 points for user oliver@ggmail.com with total points 50
+[2018-Jul-23 11:30], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com with total points 75
+[2018-Jul-23 11:30], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 100
+[2018-Jul-23 11:30], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 125
+[2018-Jul-23 11:31], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 150
+[2018-Jul-23 11:31], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 175
+[2018-Jul-23 11:33], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 200
+[2018-Jul-23 11:33], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 225
+[2018-Jul-23 11:33], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 250
+[2018-Jul-23 11:33], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 275
+[2018-Jul-23 11:33], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 300
+[2018-Jul-23 11:34], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 325
+[2018-Jul-23 11:34], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 350
+[2018-Jul-23 11:34], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 375
+[2018-Jul-23 11:34], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 400
+[2018-Jul-23 11:34], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 425
+[2018-Jul-23 11:35], 127.0.0.1, POST, http, /api/admin/point/6/4?, 200 OK, tom@ggmail.com, redeem_course -50 points for user oliver@ggmail.com to total points 375
+[2018-Jul-23 11:35], 127.0.0.1, POST, http, /api/admin/point/6/4?, 200 OK, tom@ggmail.com, redeem_course -50 points for user oliver@ggmail.com to total points 325
+[2018-Jul-23 11:35], 127.0.0.1, POST, http, /api/admin/point/6/4?, 200 OK, tom@ggmail.com, redeem_course -50 points for user oliver@ggmail.com to total points 275
+[2018-Jul-23 11:35], 127.0.0.1, POST, http, /api/admin/point/6/4?, 200 OK, tom@ggmail.com, redeem_course -50 points for user oliver@ggmail.com to total points 225
+[2018-Jul-23 11:35], 127.0.0.1, POST, http, /api/admin/point/6/4?, 200 OK, tom@ggmail.com, redeem_course -50 points for user oliver@ggmail.com to total points 175
+[2018-Jul-23 11:35], 127.0.0.1, POST, http, /api/admin/point/6/4?, 200 OK, tom@ggmail.com, redeem_course -50 points for user oliver@ggmail.com to total points 125
+[2018-Jul-23 11:35], 127.0.0.1, POST, http, /api/admin/point/6/4?, 200 OK, tom@ggmail.com, redeem_course -50 points for user oliver@ggmail.com to total points 75
+[2018-Jul-23 11:35], 127.0.0.1, POST, http, /api/admin/point/6/4?, 200 OK, tom@ggmail.com, redeem_course -50 points for user oliver@ggmail.com to total points 25
+[2018-Jul-23 11:35], 127.0.0.1, POST, http, /api/admin/point/6/4?, 200 OK, tom@ggmail.com, Not enough points for oliver@ggmail.com
+[2018-Jul-23 11:35], 127.0.0.1, GET, http, /api/admin/point/6?, 200 OK, tom@ggmail.com, Get points information for oliver@ggmail.com
+[2018-Jul-23 11:36], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 50
+[2018-Jul-23 11:40], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 75
+[2018-Jul-23 11:40], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 100
+[2018-Jul-23 11:40], 127.0.0.1, POST, http, /api/admin/point/6/3?, 200 OK, tom@ggmail.com, test44 -40 points for user oliver@ggmail.com to total points 60
+[2018-Jul-23 11:40], 127.0.0.1, POST, http, /api/admin/point/6/3?, 200 OK, tom@ggmail.com, test44 -40 points for user oliver@ggmail.com to total points 20
+[2018-Jul-23 11:41], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 45
+[2018-Jul-23 11:41], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 70
+[2018-Jul-23 11:41], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 95
+[2018-Jul-23 11:41], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 120
+[2018-Jul-23 11:41], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 145
+[2018-Jul-23 11:41], 127.0.0.1, POST, http, /api/admin/point/6/3?, 200 OK, tom@ggmail.com, test44 -40 points for user oliver@ggmail.com to total points 105
+[2018-Jul-23 11:42], 127.0.0.1, POST, http, /api/admin/point/6/3?, 200 OK, tom@ggmail.com, test44 -40 points for user oliver@ggmail.com to total points 65
+[2018-Jul-23 11:42], 127.0.0.1, POST, http, /api/admin/point/6/3?, 200 OK, tom@ggmail.com, test44 -40 points for user oliver@ggmail.com to total points 25
+[2018-Jul-23 11:43], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 50
+[2018-Jul-23 11:43], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 75
+[2018-Jul-23 11:43], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 100
+[2018-Jul-23 11:43], 127.0.0.1, POST, http, /api/admin/point/6/2?, 200 OK, tom@ggmail.com, attend_course 25 points for user oliver@ggmail.com to total points 125
+[2018-Jul-23 11:43], 127.0.0.1, POST, http, /api/admin/point/6/3?, 200 OK, tom@ggmail.com, test44 -40 points for user oliver@ggmail.com to total points 85
+[2018-Jul-23 11:44], 127.0.0.1, POST, http, /api/admin/point/6/11?, 200 OK, tom@ggmail.com, sdffccwef 80 points for user oliver@ggmail.com to total points 165
+[2018-Jul-23 11:44], 127.0.0.1, POST, http, /api/admin/point/6/11?, 200 OK, tom@ggmail.com, sdffccwef 80 points for user oliver@ggmail.com to total points 245
+[2018-Jul-23 11:44], 127.0.0.1, POST, http, /api/admin/point/6/11?, 200 OK, tom@ggmail.com, sdffccwef 80 points for user oliver@ggmail.com to total points 325
+[2018-Jul-23 11:44], 127.0.0.1, POST, http, /api/admin/point/6/11?, 200 OK, tom@ggmail.com, sdffccwef 80 points for user oliver@ggmail.com to total points 405
+[2018-Jul-23 11:44], 127.0.0.1, POST, http, /api/admin/point/6/11?, 200 OK, tom@ggmail.com, sdffccwef 80 points for user oliver@ggmail.com to total points 485
+[2018-Jul-23 11:44], 127.0.0.1, POST, http, /api/admin/point/6/11?, 200 OK, tom@ggmail.com, sdffccwef 80 points for user oliver@ggmail.com to total points 565
+[2018-Jul-23 11:44], 127.0.0.1, POST, http, /api/admin/point/6/11?, 200 OK, tom@ggmail.com, sdffccwef 80 points for user oliver@ggmail.com to total points 645
+[2018-Jul-23 11:44], 127.0.0.1, POST, http, /api/admin/point/6/3?, 200 OK, tom@ggmail.com, test44 -40 points for user oliver@ggmail.com to total points 605
+[2018-Jul-23 11:45], 127.0.0.1, POST, http, /api/admin/point/6/3?, 200 OK, tom@ggmail.com, test44 -40 points for user oliver@ggmail.com to total points 565
+[2018-Jul-23 11:45], 127.0.0.1, POST, http, /api/admin/point/6/3?, 200 OK, tom@ggmail.com, test44 -40 points for user oliver@ggmail.com to total points 525
+[2018-Jul-23 11:47], 127.0.0.1, POST, http, /api/admin/point/6/3?, 200 OK, tom@ggmail.com, test44 -40 points for user oliver@ggmail.com to total points 485
+[2018-Jul-23 11:47], 127.0.0.1, POST, http, /api/admin/point/6/3?, 200 OK, tom@ggmail.com, test44 -40 points for user oliver@ggmail.com to total points 445
+[2018-Jul-23 11:49], 127.0.0.1, POST, http, /api/point/1?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:50], 127.0.0.1, POST, http, /api/point/1?, 404 NOT FOUND, tom@ggmail.com, Please see error
+[2018-Jul-23 11:50], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Update with point type daily_login 5 points for current user email tom@ggmail.com with total points 110
+[2018-Jul-23 11:50], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Update with point type daily_login 5 points for current user email tom@ggmail.com with total points 115
+[2018-Jul-23 11:50], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Update with point type daily_login 5 points for current user email tom@ggmail.com with total points 120
+[2018-Jul-23 11:50], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Update with point type daily_login 5 points for current user email tom@ggmail.com with total points 125
+[2018-Jul-23 11:51], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Update with point type daily_login 5 points for current user email tom@ggmail.com with total points 130
+[2018-Jul-23 11:51], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Update with point type daily_login 5 points for current user email tom@ggmail.com with total points 135
+[2018-Jul-23 11:51], 127.0.0.1, POST, http, /api/point/1?, 200 OK, tom@ggmail.com, Update with point type daily_login 5 points for current user email tom@ggmail.com with total points 140
+[2018-Jul-23 11:52], 127.0.0.1, POST, http, /api/admin/pointtype/3?, 405 METHOD NOT ALLOWED, tom@ggmail.com, The method is not allowed for the requested URL.
+[2018-Jul-23 11:52], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, Updated 3: test44 with [{'title': 'sdf134ef'}, {'description': 'test772'}, {'input': '30'}]
+[2018-Jul-23 12:01], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, Updated 3: test44 with [{'title': 'sdf134ef'}, {'description': 'test772'}, {'input': '30'}]
+[2018-Jul-23 12:01], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, Updated 3: test44 with [{'title': 'sdf134ef'}, {'description': 'test772'}, {'input': '30'}]
+[2018-Jul-23 12:01], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, Updated 3: test44 with [{'title': 'sdf134ef'}, {'description': 'test772'}, {'input': '30'}]
+[2018-Jul-23 12:02], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, Updated 3: test44 with [{'title': 'sdf134ef'}, {'description': 'test772'}, {'input': '30'}]
+[2018-Jul-23 12:03], 127.0.0.1, PUT, http, /api/admin/pointtype/3?, 200 OK, tom@ggmail.com, Updated 3: test44 with [{'title': 'sdf134ef'}, {'description': 'test772'}, {'input': '30'}]
+[2018-Jul-23 14:16], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:16], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:19], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:19], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:21], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:23], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:23], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:24], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:25], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:25], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:29], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:29], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:29], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:29], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:30], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:30], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:30], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:30], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:31], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:31], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:31], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:31], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:31], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:31], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:31], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:32], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:32], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:33], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:33], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:33], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:33], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:33], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:33], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:33], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:33], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:33], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:33], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:33], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:33], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:33], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:33], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tom@ggmail.com, Successfully logged in as tom@ggmail.com
+[2018-Jul-23 14:35], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tina@ggmail.com, Successfully logged in as tina@ggmail.com
+[2018-Jul-23 14:35], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tina@ggmail.com, Successfully logged in as tina@ggmail.com
+[2018-Jul-23 14:35], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, ben@ggmail.com, Successfully logged in as ben@ggmail.com
+[2018-Jul-23 14:39], 127.0.0.1, GET, http, /api/courses?, 200 OK, ben@ggmail.com, Get all roles
+[2018-Jul-23 14:39], 127.0.0.1, GET, http, /api/courses?, 200 OK, ben@ggmail.com, Get all roles
+[2018-Jul-23 15:03], 127.0.0.1, POST, http, /api/courses?, 422 UNPROCESSABLE ENTITY, ben@ggmail.com, Course 如何自製廣告圖 exist in database already
+[2018-Jul-23 15:03], 127.0.0.1, POST, http, /api/courses?, 422 UNPROCESSABLE ENTITY, ben@ggmail.com, Course 如何自製廣告圖 exist in database already
+[2018-Jul-23 15:03], 127.0.0.1, POST, http, /api/courses?, 422 UNPROCESSABLE ENTITY, ben@ggmail.com, Course 如何自製廣告圖 exist in database already
+[2018-Jul-23 15:03], 127.0.0.1, POST, http, /api/courses?, 422 UNPROCESSABLE ENTITY, ben@ggmail.com, Course 如何自製廣告圖 exist in database already
+[2018-Jul-23 15:04], 127.0.0.1, POST, http, /api/courses?, 200 OK, ben@ggmail.com, Created new course: 如何自製廣告圖(二)
+[2018-Jul-23 15:08], 127.0.0.1, GET, http, /api/courses?, 200 OK, ben@ggmail.com, Get all roles
+[2018-Jul-23 15:08], 127.0.0.1, GET, http, /api/courses/tw0983?, 401 UNAUTHORIZED, ben@ggmail.com, Missing authorization to retrieve content
+[2018-Jul-23 15:08], 127.0.0.1, POST, http, /api/userlogin?, 200 OK, tina@ggmail.com, Successfully logged in as tina@ggmail.com
+[2018-Jul-23 15:08], 127.0.0.1, GET, http, /api/courses/tw0983?, 200 OK, tina@ggmail.com, Course information for tw0983
+[2018-Jul-23 15:09], 127.0.0.1, GET, http, /api/courses/tw09832?, 404 NOT FOUND, tina@ggmail.com, No course found for id: tw09832
+[2018-Jul-23 15:09], 127.0.0.1, GET, http, /api/courses/tw0983?, 200 OK, tina@ggmail.com, Course information for tw0983
+[2018-Jul-23 15:13], 127.0.0.1, POST, http, /api/courses?, 422 UNPROCESSABLE ENTITY, tina@ggmail.com, Course 如何自製廣告圖(二) exist in database already
+[2018-Jul-23 15:14], 127.0.0.1, POST, http, /api/courses?, 422 UNPROCESSABLE ENTITY, tina@ggmail.com, Course 如何自製廣告圖(二) exist in database already
+[2018-Jul-23 15:15], 127.0.0.1, POST, http, /api/courses?, 422 UNPROCESSABLE ENTITY, tina@ggmail.com, Course 如何自製廣告圖(二) exist in database already
+[2018-Jul-23 15:19], 127.0.0.1, POST, http, /api/courses?, 422 UNPROCESSABLE ENTITY, tina@ggmail.com, Course 如何自製廣告圖(二) exist in database already
+[2018-Jul-23 15:20], 127.0.0.1, POST, http, /api/courses?, 200 OK, tina@ggmail.com, Created new course: 如何自製廣告圖(二)
+[2018-Jul-23 15:25], 127.0.0.1, POST, http, /api/courses?, 200 OK, tina@ggmail.com, Created new course: 如何自製廣告圖(二)
+[2018-Jul-23 15:26], 127.0.0.1, POST, http, /api/courses?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:26], 127.0.0.1, POST, http, /api/courses?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:26], 127.0.0.1, POST, http, /api/courses?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:34], 127.0.0.1, POST, http, /api/courses?, 200 OK, tina@ggmail.com, Created new course: 如何自製廣告圖(二)
+[2018-Jul-23 15:42], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:42], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:44], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:44], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:44], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:44], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:45], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:45], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:46], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:47], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:49], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:50], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:52], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 15:52], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 16:09], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 16:11], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Undefined message
+[2018-Jul-23 16:19], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Updated course: 如何自製廣告圖(二)
+[2018-Jul-23 16:20], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Updated course: 如何自製廣告圖(二)
+[2018-Jul-23 16:20], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Updated course: 如何自製廣告圖(二)
+[2018-Jul-23 16:20], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Updated course: 如何自製廣告圖(二)
+[2018-Jul-23 16:20], 127.0.0.1, PUT, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Updated course: 如何自製廣告圖(二)
+[2018-Jul-23 16:32], 127.0.0.1, GET, http, /spec?, 200 OK, AnonymousUser, None
+[2018-Jul-23 16:42], 127.0.0.1, GET, http, /api/courses/TW0935?, 200 OK, tina@ggmail.com, Course information for TW0935
