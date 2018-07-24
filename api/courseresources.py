@@ -104,8 +104,26 @@ class CoursesList(Resource):
     return {message} and {data} 
     """
     def get(self):
-        all_courses = Course.query.order_by(Course.id).all()
-        data = [c.as_dict() for c in all_courses]
+        today_date = datetime.datetime.now().date()
+
+        if request.args.get('months') and request.args.get('keyword'):
+            filter_months = request.args.get('months').split(',')
+            filter_keyword = request.args.get('keyword').split(',')
+            all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(func.MONTH(Course.lesson_start).in_(filter_months)).filter(Course.category.in_(filter_keyword)).all()
+
+        elif request.args.get('months'):
+            filter_months = request.args.get('months').split(',')
+            all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(func.MONTH(Course.lesson_start).in_(filter_months)).all()
+
+        elif request.args.get('keyword'):
+            filter_keyword = request.args.get('keyword').split(',')
+            all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(Course.category.in_(filter_keyword)).all()
+        
+        else:
+            all_available_courses = Course.query.filter(Course.sale_end >= today_date).all()
+
+        data = [c.as_dict() for c in all_available_courses]
+        
         return {
             "version": api_version,
             "message": "Get all courses",
