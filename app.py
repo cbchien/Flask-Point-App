@@ -194,6 +194,7 @@ api.add_resource(pointresources.PointTypeListAdmin, '/api/admin/pointtype') #[GE
 api.add_resource(pointresources.PointLogAdmin, '/api/admin/pointlog/<int:user_id>') #[GET]
 
 api.add_resource(courseresources.CoursesList, '/api/courses') #[GET, POST]
+api.add_resource(courseresources.CoursesFilterList, '/api/courses/<string:months>') #[GET]
 api.add_resource(courseresources.Courses, '/api/courses/<string:cocospace_item_id>') #[GET, POST]
 
 if __name__ == "__main__":
