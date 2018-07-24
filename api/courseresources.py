@@ -109,6 +109,7 @@ class CoursesList(Resource):
         if request.args.get('months') and request.args.get('keyword'):
             filter_months = request.args.get('months').split(',')
             filter_keyword = request.args.get('keyword').split(',')
+            #  all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(func.MONTH(Course.lesson_start).in_(filter_months)).filter(Course.title.contains(filter_keyword)).all()
             all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(func.MONTH(Course.lesson_start).in_(filter_months)).filter(Course.category.in_(filter_keyword)).all()
 
         elif request.args.get('months'):
