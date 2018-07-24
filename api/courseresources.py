@@ -6,6 +6,7 @@ from flask_restful import Resource
 from flask_security import Security, login_required, current_user
 from models import Role, User, Course
 from utils import check_member_role
+from sqlalchemy.sql import func
 
 class Courses(Resource):
     """Get details for a course\n
@@ -107,7 +108,7 @@ class CoursesList(Resource):
         data = [c.as_dict() for c in all_courses]
         return {
             "version": api_version,
-            "message": "Get all roles",
+            "message": "Get all courses",
             "data": data
         }, 200
 
@@ -177,3 +178,19 @@ class CoursesList(Resource):
             "message": "Check data input",
             "data": {}
         }, 404
+    
+class CoursesFilterList(Resource):
+    """Return a list of courses\n
+    return {message} and {data} 
+    """
+    def get(self, months):
+        today_date = datetime.datetime.now().date()
+        filter_months = months.split(',')
+        all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(func.MONTH(Course.lesson_start).in_(filter_months)).all()
+        data = [c.as_dict() for c in all_available_courses]
+
+        return {
+            "version": api_version,
+            "message": "Get all courses filtered ",
+            "data": data
+        }, 200
