@@ -1,4 +1,4 @@
-from app import security, user_datastore, api_version, client
+from app import user_datastore, api_version, client
 import datetime, re, ast, json
 from database import db_session
 from flask import request, jsonify, session
@@ -58,7 +58,7 @@ class MemberList(Resource):
     :param string contact: Member's contact number
     """
     def post(self):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
@@ -67,7 +67,7 @@ class MemberList(Resource):
             email = request.json["email"]
             print('\n\n',email,'\n\n')
             password = request.json["password"]
-            cocospace_username = request.json.get("cocospace_username")
+            unique_username = request.json.get("unique_username")
             current_login_ip = request.remote_addr
             company = request.json.get("company")
             contact = request.json.get("contact")
@@ -109,7 +109,7 @@ class MemberList(Resource):
         # create user and add user role
         user = User(
             email = email,
-            cocospace_username = cocospace_username,
+            unique_username = unique_username,
             password = hash_password(password),
             current_login_ip = current_login_ip,
             status = status,
@@ -162,13 +162,13 @@ class Member(Resource):
     :param boolean: Member status status
     """
     def put(self, member_id):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
 
         if "application/json" in request.headers["Content-Type"]:
-            cocospace_username = request.json.get("cocospace_username")
+            unique_username = request.json.get("unique_username")
             company = request.json.get("company")
             contact = request.json.get("contact")
             address = request.json.get("address")
@@ -190,8 +190,8 @@ class Member(Resource):
             role_to_append = Role.query.filter_by(name=role).first()
 
             if user:
-                if cocospace_username is not None:
-                    user.cocospace_username = cocospace_username
+                if unique_username is not None:
+                    user.unique_username = unique_username
                 if company is not None:
                     user.company = company
                 if contact is not None:
@@ -290,7 +290,7 @@ class MemberLogin(Resource):
                     "message": "Successfully logged in as {}".format(email),
                     "data": {
                         "email": email,
-                        "username": user.cocospace_username,
+                        "username": user.unique_username,
                         "company": user.company,
                         "contact": user.contact,
                         "address": user.address,
@@ -329,7 +329,7 @@ class OpsHistoryList(Resource):
        Limited to 300 entries
     """
     def get(self):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
@@ -349,7 +349,7 @@ class OpsHistory(Resource):
     :param string email: Member's email as primary account identifier \n
     """
     def get(self, member_id):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401

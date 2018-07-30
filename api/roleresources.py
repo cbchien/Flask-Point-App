@@ -1,10 +1,10 @@
-from app import security, user_datastore, api_version
+from app import api_version, user_datastore
 from database import db_session
 from flask import request, jsonify
 from flask_restful import Resource
 from flask_security import Security, login_required, current_user
-from models import Role, User, Permission
-from utils import check_member_role, return_permission_list
+from models import User, Role, Permission
+from utils import return_permission_list, check_member_role
 
 class RoleList(Resource):
     """Return a list of roles\n
@@ -84,7 +84,7 @@ class Roles(Resource):
     return {message} and {data} 
     """
     def get(self, role_id):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
@@ -102,7 +102,7 @@ class Roles(Resource):
     return {message} and {data} 
     """
     def put(self, role_id):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
@@ -128,9 +128,10 @@ class Roles(Resource):
                     "message":"Update {}(id: {}) info".format(role_updated.label, role_updated.id),
                     "data": {
                         "id": role_updated.id,
+                        "name": role_updated.name,
                         "description": role_updated.description,
                         "label": role_updated.label,
-                        "render_structure": format_permission_list
+                        "permission": format_permission_list
                     }
                 }, 200
         return {
@@ -154,9 +155,12 @@ class PermissonList(Resource):
 
     """Add a new permission\n
     return {message} and {data} 
+    bit count will auto generate from the last entry
+    :params item: page_action for naming convention
+    :params page: this is the page that this permission is associate to
     """
     def post(self):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
@@ -192,7 +196,7 @@ class PermissonList(Resource):
 
         return {
             "version": api_version,
-            "message": "Get all roles",
+            "message": "Added new permission {}".format(new_permission.item),
             "data": new_permission.as_dict()
         }, 200
 
@@ -201,7 +205,7 @@ class Permissions(Resource):
     return {message} and {data} 
     """
     def get(self, permission_id):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
@@ -218,7 +222,7 @@ class Permissions(Resource):
     return {message} and {data} 
     """
     def put(self, permission_id):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401

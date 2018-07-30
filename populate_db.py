@@ -5,11 +5,11 @@ from flask_security.utils import hash_password
 
 def populate_db_roles():
     # Create default roles
-    if not Role.query.filter_by(name='cocospace_admin').first():
-        role1 = Role('cocospace_admin', 'View, Create, Edit', 'Admin', 1+2+4+8)
+    if not Role.query.filter_by(name='admin').first():
+        role1 = Role('admin', 'View, Create, Edit', 'Admin', 1+2+4+8)
         db_session.add(role1)
-    if not Role.query.filter_by(name='cocospace_employee').first():
-        role2 = Role('cocospace_employee', 'View, Create', 'cocospace Employee', 1+2+4)
+    if not Role.query.filter_by(name='employee').first():
+        role2 = Role('employee', 'View, Create', 'Employee', 1+2+4)
         db_session.add(role2)
     if not Role.query.filter_by(name='user').first():
         role3 = Role('user', 'Normal user', 'User', 1)
@@ -21,14 +21,14 @@ def populate_db_roles():
 
 def populate_db_users():
     # Create default users
-    admin_role = Role.query.filter_by(name='cocospace_admin').first()
-    cocospace_employee_role = Role.query.filter_by(name='cocospace_employee').first()
+    admin_role = Role.query.filter_by(name='admin').first()
+    employee_role = Role.query.filter_by(name='employee').first()
     user_role = Role.query.filter_by(name='user').first()
     super_user_role = Role.query.filter_by(name='super_user').first()
-    if not User.query.filter_by(cocospace_username='cocospace_tom').first():
+    if not User.query.filter_by(unique_username='tom').first():
         user1 = User(
             email = 'tom@ggmail.com',
-            cocospace_username = 'cocospace_tom',
+            unique_username = 'tom',
             password = hash_password('123456'),
             current_login_ip = '0.0.0.0',
             status = 'active',
@@ -42,10 +42,10 @@ def populate_db_users():
         )
         admin_role.users.append(user1)
         db_session.add(user1)   
-    if not User.query.filter_by(cocospace_username='cocospace_tina').first():
+    if not User.query.filter_by(unique_username='tina').first():
         user2 = User(
             email = 'tina@ggmail.com',
-            cocospace_username = 'cocospace_tina',
+            unique_username = 'tina',
             password = hash_password('123456'),
             current_login_ip = '0.0.0.0',
             status = 'active',
@@ -59,10 +59,10 @@ def populate_db_users():
         )
         admin_role.users.append(user2)
         db_session.add(user2)
-    if not User.query.filter_by(cocospace_username='cocospace_ben').first():
+    if not User.query.filter_by(unique_username='ben').first():
         user3 = User(
             email = 'ben@ggmail.com',
-            cocospace_username = 'cocospace_ben',
+            unique_username = 'ben',
             password = hash_password('123456'),
             current_login_ip = '0.0.0.0',
             status = 'active',
@@ -75,13 +75,13 @@ def populate_db_users():
             level = 3,
             gender = 'male'
         )
-        cocospace_employee_role.users.append(user3)
+        employee_role.users.append(user3)
         db_session.add(user3)
-    if not User.query.filter_by(cocospace_username='cocospace_bob').first():
-        cocospace_employee = Role.query.filter_by(name='cocospace_employee').first()
+    if not User.query.filter_by(unique_username='bob').first():
+        employee = Role.query.filter_by(name='employee').first()
         user4 = User(
             email = 'bob@ggmail.com',
-            cocospace_username = 'cocospace_bob',
+            unique_username = 'bob',
             password = hash_password('123456'),
             current_login_ip = '0.0.0.0',
             status = 'active',
@@ -93,13 +93,13 @@ def populate_db_users():
             birthdate = '1980-01-01',
             gender = 'male'
         )
-        cocospace_employee_role.users.append(user4)
+        employee_role.users.append(user4)
         db_session.add(user4) 
-    if not User.query.filter_by(cocospace_username='user_chris').first():
-        cocospace_employee = Role.query.filter_by(name='cocospace_employee').first()
+    if not User.query.filter_by(unique_username='user_chris').first():
+        employee = Role.query.filter_by(name='employee').first()
         user5 = User(
             email = 'chris@ggmail.com',
-            cocospace_username = 'user_chris',
+            unique_username = 'user_chris',
             password = hash_password('123456'),
             current_login_ip = '0.0.0.0',
             status = 'active',
@@ -113,11 +113,11 @@ def populate_db_users():
         )
         user_role.users.append(user5)
         db_session.add(user5)  
-    if not User.query.filter_by(cocospace_username='super_user_Oliver').first():
-        cocospace_employee = Role.query.filter_by(name='cocospace_employee').first()
+    if not User.query.filter_by(unique_username='super_user_Oliver').first():
+        employee = Role.query.filter_by(name='employee').first()
         user6 = User(
             email = 'oliver@ggmail.com',
-            cocospace_username = 'super_user_Oliver',
+            unique_username = 'super_user_Oliver',
             password = hash_password('123456'),
             current_login_ip = '0.0.0.0',
             status = 'active',
@@ -203,9 +203,9 @@ def populate_db_permission():
     db_session.commit()
 
 def populate_db_courses():
-    if not Course.query.filter_by(cocospace_item_id='CRS001').first():
+    if not Course.query.filter_by(ecommerce_item_id='CRS001').first():
         course1 = Course(
-            cocospace_item_id = "CRS001",
+            ecommerce_item_id = "CRS001",
             title = "如果操作APP",
             category = "入門",
             city = "台北市",
@@ -225,15 +225,15 @@ def populate_db_courses():
             lesson_start = "2018-08-12 12:00:10",
             lesson_end = "2018-08-12 14:00:10",
             updated_at = "2018-07-18 12:00:10",
-            last_updated_by = "cocospace_admin"
+            last_updated_by = "admin"
         )
         db_session.add(course1)   
     
-    if not Course.query.filter_by(cocospace_item_id='CRS002').first():
+    if not Course.query.filter_by(ecommerce_item_id='CRS002').first():
         course2 = Course(
-            cocospace_item_id = "CRS002",
+            ecommerce_item_id = "CRS002",
             title = "超厲害操作APP",
-            category = "進階",
+            category = "攝影",
             city = "台北市",
             head_count = 30,
             tag = "進階課程",
@@ -251,7 +251,7 @@ def populate_db_courses():
             lesson_start = "2018-08-12 12:00:10",
             lesson_end = "2018-08-12 14:00:10",
             updated_at = "2018-07-18 12:00:10",
-            last_updated_by = "cocospace_admin"
+            last_updated_by = "admin"
         )
         db_session.add(course2)   
     

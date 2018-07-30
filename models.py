@@ -64,7 +64,7 @@ class User(Base, UserMixin):
     __table_args__ = {'extend_existing': True} 
     id = Column(Integer, primary_key=True)
     email = Column(String(255), unique=True)
-    cocospace_username = Column(VARCHAR(255))
+    unique_username = Column(VARCHAR(255))
     password = Column(String(255))
     last_login_at = Column(DateTime(), default=datetime.datetime.now())
     current_login_at = Column(DateTime(), default=datetime.datetime.now())
@@ -89,11 +89,6 @@ class User(Base, UserMixin):
     role = relationship("Role")
     user_point = relationship("UserPoint", uselist=False, back_populates="user")
     point_log = relationship("PointLog", back_populates="user", lazy='dynamic')
-
-    # def __init__(self, email, username, password, current_login_ip, \
-    #             status, contact, address, city, categories, company, birthdate, gender, \
-    #             level, profile_url, register_method, external_user_id, cocospace_id):
-    #     self.email = email
 
     def __init__(self, **kwargs):
         vars(self).update(kwargs)
@@ -210,16 +205,16 @@ class Logging(Base):
     def __repr__(self):
         return '%r %r %r %r %r' %(self.request_remote_addr, self.method, self.scheme, self.full_path, self.status)
 
-# Table to store lessons information from cocospace University store
+# Table to store lessons information from ecommerce store
 class Course(Base):
     __tablename__ = 'course'
     id = Column(Integer, primary_key=True)  # 課程編號
-    cocospace_item_id = Column(String(255))    # 蝦皮商品編號
+    ecommerce_item_id = Column(String(255))    # 商品編號
     title = Column(String(255))             # 課程名稱
-    category = Column(String(30))           # 課程類別
+    category = Column(String(30))           # 課程類別 (行銷, 美編, ...)
     city = Column(String(30))               # 地區
     head_count = Column(Integer())          # 名額
-    tag = Column(String(255))               # 標籤
+    tag = Column(String(255))               # 課程深度 (入門課程, 進階, 高階)
     description = Column(String(255))       # 簡介
     instructor = Column(String(255))        # 教師
     price = Column(Integer())               # 價格

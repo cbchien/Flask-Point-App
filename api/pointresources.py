@@ -1,4 +1,4 @@
-from app import security, user_datastore, api_version
+from app import api_version
 import datetime
 from database import db_session
 from flask import request, jsonify
@@ -100,7 +100,7 @@ class UserPointAdmin(Resource):
     return {message} and {data} 
     """
     def get(self, user_id):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
@@ -119,7 +119,7 @@ class UserPointAdmin(Resource):
     return {message} and {data} 
     """
     def post(self, user_id, point_id):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
@@ -202,7 +202,7 @@ class PointTypeAdmin(Resource):
     return {message} and {data} 
     """
     def get(self, point_id):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
@@ -232,7 +232,7 @@ class PointTypeAdmin(Resource):
     return {message} and {data} 
     """
     def put(self, point_id):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
@@ -287,7 +287,7 @@ class PointTypeListAdmin(Resource):
     return {message} and {data} 
     """
     def get(self):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
@@ -312,7 +312,7 @@ class PointTypeListAdmin(Resource):
     return {message} and {data} 
     """
     def post(self):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
@@ -385,9 +385,24 @@ class PointLogAdmin(Resource):
     return {message} and {data} 
     """
     def get(self, user_id):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
+        
+        user = User.query.filter_by(id=user_id).first()
+        if user:
+            all_point_logs = user.point_log.order_by(PointLog.timestamp.desc()).all()
+            all_data = [log.as_dict() for log in all_point_logs]
 
-        return "Seeing {}'s point log as an admin".format(user_id)
+            return {
+                "version": api_version,
+                "message":"Seeing {}'s point log as an admin".format(user.unique_username),
+                "data": all_data
+            }, 200
+
+        return {
+            "version": api_version,
+            "message":"This user index does not exist.",
+            "data": {}
+        }, 404

@@ -17,10 +17,10 @@ from populate_db import populate_db_roles, populate_db_users, \
 app = Flask(__name__, static_folder="./client/static", template_folder="./client")
 app.config["DEBUG"] = True
 app.config["SECRET_KEY"] = "super-secret"
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root@localhost/localwarehouse"
-app.config["SQLALCHEMY_BINDS "] = {
-    "warehouse_tw": "mysql://brianchien:V99PlgLd9RVh9RxV@10.4.211.50/warehouse_tw"
-}
+# app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root@localhost/localwarehouse"
+# app.config["SQLALCHEMY_BINDS "] = {
+#     "warehouse_tw": "mysql://brianchien:V99PlgLd9RVh9RxV@10.4.211.50/warehouse_tw"
+# }
 app.config["SECURITY_PASSWORD_HASH"] = "pbkdf2_sha512"
 app.config["SECURITY_PASSWORD_SALT"] = "wwefafvbdmyumdhngfrdefrthyjukmi"
 app.config["SECURITY_LOGIN_URL"] = "/flask-login"
@@ -131,10 +131,6 @@ def after_request(response):
 #     db_session.commit()
 #     return traceback, 500
 
-@app.route("/spec")
-def spec():
-    return jsonify(swagger(app))
-
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'client'),
@@ -169,32 +165,32 @@ def login():
     return render_template("index.html")
 
 # List of APIs
-from api import roleresources, userresources, pointresources, courseresources
+from api_resources import userresources, pointresources, courseresources, roleresources
 
-api.add_resource(roleresources.Roles, '/api/roles/<int:role_id>') #[GET, PUT]
-api.add_resource(roleresources.RoleList, '/api/roles') #[GET, POST]
-api.add_resource(roleresources.Permissions, '/api/permission/<int:permission_id>') #[GET, PUT]
-api.add_resource(roleresources.PermissonList, '/api/permission') #[GET, POST]
+api.add_resource(roleresources.Roles, '/api/roles/<int:role_id>') #[GET, PUT] 
+api.add_resource(roleresources.RoleList, '/api/roles') #[GET, POST] 
+api.add_resource(roleresources.Permissions, '/api/permission/<int:permission_id>') #[GET, PUT] 
+api.add_resource(roleresources.PermissonList, '/api/permission') #[GET, POST] 
 
-api.add_resource(userresources.Member, '/api/members/<int:member_id>')  #[GET, PUT]
-api.add_resource(userresources.MemberList, '/api/members') #[GET, POST]
-api.add_resource(userresources.MemberChangePassword, '/api/members/changepassword') #[POST]
-api.add_resource(userresources.MemberLogin, '/api/userlogin') #[POST]
-api.add_resource(userresources.MemberLogout, '/api/userlogout') #[POST]
+api.add_resource(userresources.Member, '/api/members/<int:member_id>')  #[GET, PUT] xx
+api.add_resource(userresources.MemberList, '/api/members') #[GET, POST] 
+api.add_resource(userresources.MemberChangePassword, '/api/members/changepassword') #[POST] 
+api.add_resource(userresources.MemberLogin, '/api/userlogin') #[POST] 
+api.add_resource(userresources.MemberLogout, '/api/userlogout') #[POST] 
 
-api.add_resource(userresources.OpsHistory, '/api/opshistory/<int:member_id>')  #[GET]
-api.add_resource(userresources.OpsHistoryList, '/api/opshistory')  #[GET]
+api.add_resource(userresources.OpsHistory, '/api/opshistory/<int:member_id>')  #[GET] 
+api.add_resource(userresources.OpsHistoryList, '/api/opshistory')  #[GET] 
 
-api.add_resource(pointresources.UserPointUser, '/api/point', #[GET]
-                                        '/api/point/<int:point_id>') #[POST]
-api.add_resource(pointresources.UserPointAdmin, '/api/admin/point/<int:user_id>', #[GET]
+api.add_resource(pointresources.UserPointUser, '/api/point', #[GET] 
+                                        '/api/point/<int:point_id>') #[POST] 
+api.add_resource(pointresources.UserPointAdmin, '/api/admin/point/<int:user_id>', #[GET] 
                                             '/api/admin/point/<int:user_id>/<int:point_id>') #[POST]                            
-api.add_resource(pointresources.PointTypeAdmin, '/api/admin/pointtype/<int:point_id>') #[GET, PUT]
-api.add_resource(pointresources.PointTypeListAdmin, '/api/admin/pointtype') #[GET, POST]
+api.add_resource(pointresources.PointTypeAdmin, '/api/admin/pointtype/<int:point_id>') #[GET, PUT] 
+api.add_resource(pointresources.PointTypeListAdmin, '/api/admin/pointtype') #[GET, POST] 
 api.add_resource(pointresources.PointLogAdmin, '/api/admin/pointlog/<int:user_id>') #[GET]
 
-api.add_resource(courseresources.CoursesList, '/api/courses') #[GET, POST]
-api.add_resource(courseresources.Courses, '/api/courses/<string:cocospace_item_id>') #[GET, POST]
+api.add_resource(courseresources.CoursesList, '/api/courses') #[GET, POST] 
+api.add_resource(courseresources.Courses, '/api/courses/<string:ecommerce_item_id>') #[GET, POST]
 
 if __name__ == "__main__":
     app.run(port=5000)

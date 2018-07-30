@@ -6,49 +6,50 @@ from flask_restful import Resource
 from flask_security import Security, login_required, current_user
 from models import Role, User, Course
 from utils import check_member_role
+from sqlalchemy.sql import func
 
 class Courses(Resource):
     """Get details for a course\n
     return {message} and {data} 
     """
-    def get(self, cocospace_item_id):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+    def get(self, ecommerce_item_id):
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
 
-        course = Course.query.filter_by(cocospace_item_id=cocospace_item_id).first()
+        course = Course.query.filter_by(ecommerce_item_id=ecommerce_item_id).first()
         if course:
             return {
                 "version": api_version,
-                "message": "Course information for {}".format(cocospace_item_id),
+                "message": "Course information for {}".format(ecommerce_item_id),
                 "data": course.as_dict()
             }, 200
         return {
                 "version": api_version,
-                "message": "No course found for id: {}".format(cocospace_item_id),
+                "message": "No course found for id: {}".format(ecommerce_item_id),
                 "data": {}
         }, 404
 
     """Update details for a course\n
     return {message} and {data} 
     """
-    def put(self, cocospace_item_id):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+    def put(self, ecommerce_item_id):
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
 
         if "application/json" in request.headers["Content-Type"]:
-            exist_course = Course.query.filter_by(cocospace_item_id=cocospace_item_id).first()
+            exist_course = Course.query.filter_by(ecommerce_item_id=ecommerce_item_id).first()
             if not exist_course:
                 return {
                     "version": api_version,
-                    "message": "This item {} does not exist in database".format(cocospace_item_id),
+                    "message": "This item {} does not exist in database".format(ecommerce_item_id),
                     "data": {}
                 }, 404
-            if request.json["cocospace_item_id"]:
-                exist_course.cocospace_item_id = request.json["cocospace_item_id"]
+            if request.json["ecommerce_item_id"]:
+                exist_course.ecommerce_item_id = request.json["ecommerce_item_id"]
             if request.json["category"]:
             	exist_course.category = request.json["category"]
             if request.json["city"]:
@@ -86,7 +87,7 @@ class Courses(Resource):
             exist_course.updated_at = datetime.datetime.now()
             exist_course.last_updated_by = current_user.email
 
-            updated_course = Course.query.filter_by(cocospace_item_id=cocospace_item_id).first()
+            updated_course = Course.query.filter_by(ecommerce_item_id=ecommerce_item_id).first()
             return {
                 "version": api_version,
                 "message": "Updated course: {}".format(updated_course.title),
@@ -103,11 +104,29 @@ class CoursesList(Resource):
     return {message} and {data} 
     """
     def get(self):
-        all_courses = Course.query.order_by(Course.id).all()
-        data = [c.as_dict() for c in all_courses]
+        today_date = datetime.datetime.now().date()
+
+        if request.args.get('months') and request.args.get('keyword'):
+            filter_months = request.args.get('months').split(',')
+            filter_keyword = request.args.get('keyword').split(',')
+            all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(func.MONTH(Course.lesson_start).in_(filter_months)).filter(Course.title.contains(filter_keyword)).all()
+
+        elif request.args.get('months'):
+            filter_months = request.args.get('months').split(',')
+            all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(func.MONTH(Course.lesson_start).in_(filter_months)).all()
+
+        elif request.args.get('keyword'):
+            filter_keyword = request.args.get('keyword').split(',')
+            all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(Course.title.contains(filter_keyword)).all()
+        
+        else:
+            all_available_courses = Course.query.filter(Course.sale_end >= today_date).all()
+
+        data = [c.as_dict() for c in all_available_courses]
+
         return {
             "version": api_version,
-            "message": "Get all roles",
+            "message": "Get all courses",
             "data": data
         }, 200
 
@@ -115,7 +134,7 @@ class CoursesList(Resource):
     return {message} and {data} 
     """
     def post(self):
-        if check_member_role(["cocospace_admin"], current_user.email) == False:
+        if not current_user.is_authenticated or check_member_role(["admin"], current_user.email) == False:
             return {
                 "message": 'Missing authorization to retrieve content',
             }, 401
@@ -125,7 +144,7 @@ class CoursesList(Resource):
             # for key, value in request.json.items():
             #     exec(key + '=value')
 
-            cocospace_item_id = request.json["cocospace_item_id"]
+            ecommerce_item_id = request.json["ecommerce_item_id"]
             title = request.json["title"]
             category = request.json["category"]
             city = request.json["city"]
@@ -148,7 +167,7 @@ class CoursesList(Resource):
             last_updated_by = current_user.email
             
             # id cannot be duplicate 
-            exist_course = Course.query.filter_by(cocospace_item_id=cocospace_item_id).first()
+            exist_course = Course.query.filter_by(ecommerce_item_id=ecommerce_item_id).first()
             if exist_course:
                 return {
                     "version": api_version,
@@ -156,7 +175,7 @@ class CoursesList(Resource):
                     "data": exist_course.as_dict()
             }, 422
 
-            new_course = Course(cocospace_item_id = cocospace_item_id, title = title, category = category, city = city, head_count = head_count, \
+            new_course = Course(ecommerce_item_id = ecommerce_item_id, title = title, category = category, city = city, head_count = head_count, \
                 tag = tag, description = description, instructor = instructor, price = price, point_price = point_price, \
                 thumbnail_url = thumbnail_url, fullsize_url = fullsize_url, store_url = store_url, inactive_at = inactive_at, \
                 status = status, sale_start = sale_start, sale_end = sale_end, lesson_start = lesson_start, \
@@ -166,7 +185,7 @@ class CoursesList(Resource):
             db_session.add(new_course)
             db_session.commit()
 
-            created_course = Course.query.filter_by(cocospace_item_id=cocospace_item_id).first()
+            created_course = Course.query.filter_by(ecommerce_item_id=ecommerce_item_id).first()
             return {
                 "version": api_version,
                 "message": "Created new course: {}".format(title),

@@ -7,7 +7,7 @@ from sqlalchemy import Text
 import json, pymysql
 from db_pool import PooledDB
 
-engine = create_engine('mysql://root@localhost/cocospace_university?charset=utf8', \
+engine = create_engine('mysql://root@localhost/point-app?charset=utf8', \
                        convert_unicode=True, encoding='utf-8')
 db_session = scoped_session(sessionmaker(autocommit=False,
                                          autoflush=False,
@@ -57,7 +57,7 @@ class Client(object):
     PORT = 3306
     USER = 'root' # database username
     PASSWD = '' # database password
-    DB = 'cocospace_university' # database name
+    DB = 'point-app' # database name
     CHARSET= 'utf8'  
     #CHARSET= 'utf8mb4'
     CURSORCLASS = pymysql.cursors.DictCursor
@@ -105,7 +105,7 @@ class Client(object):
 
 
     def _handle_response(self,resp,response):
-        ''' Internal helper for handling API responses from the cocospace24 server.
+        ''' Internal helper for handling API responses from the server.
             Raises the appropriate exceptions when necessary;
             If all the things is normal ,handler will returns the correct response.
             
