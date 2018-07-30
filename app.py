@@ -189,8 +189,14 @@ api.add_resource(pointresources.PointTypeAdmin, '/api/admin/pointtype/<int:point
 api.add_resource(pointresources.PointTypeListAdmin, '/api/admin/pointtype') #[GET, POST] 
 api.add_resource(pointresources.PointLogAdmin, '/api/admin/pointlog/<int:user_id>') #[GET]
 
+<<<<<<< HEAD
 api.add_resource(courseresources.CoursesList, '/api/courses') #[GET, POST] 
 api.add_resource(courseresources.Courses, '/api/courses/<string:ecommerce_item_id>') #[GET, POST]
+=======
+api.add_resource(courseresources.CoursesList, '/api/courses') #[GET, POST]
+api.add_resource(courseresources.CoursesFilterList, '/api/courses/<string:months>') #[GET]
+api.add_resource(courseresources.Courses, '/api/courses/<string:cocospace_item_id>') #[GET, POST]
+>>>>>>> 422bb86c162a1f366fc8349a67c752c6ccfc937d
 
 if __name__ == "__main__":
     app.run(port=5000)

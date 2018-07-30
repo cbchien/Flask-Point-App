@@ -109,7 +109,12 @@ class CoursesList(Resource):
         if request.args.get('months') and request.args.get('keyword'):
             filter_months = request.args.get('months').split(',')
             filter_keyword = request.args.get('keyword').split(',')
+<<<<<<< HEAD
             all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(func.MONTH(Course.lesson_start).in_(filter_months)).filter(Course.title.contains(filter_keyword)).all()
+=======
+            #  all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(func.MONTH(Course.lesson_start).in_(filter_months)).filter(Course.title.contains(filter_keyword)).all()
+            all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(func.MONTH(Course.lesson_start).in_(filter_months)).filter(Course.category.in_(filter_keyword)).all()
+>>>>>>> 422bb86c162a1f366fc8349a67c752c6ccfc937d
 
         elif request.args.get('months'):
             filter_months = request.args.get('months').split(',')
@@ -117,13 +122,21 @@ class CoursesList(Resource):
 
         elif request.args.get('keyword'):
             filter_keyword = request.args.get('keyword').split(',')
+<<<<<<< HEAD
             all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(Course.title.contains(filter_keyword)).all()
+=======
+            all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(Course.category.in_(filter_keyword)).all()
+>>>>>>> 422bb86c162a1f366fc8349a67c752c6ccfc937d
         
         else:
             all_available_courses = Course.query.filter(Course.sale_end >= today_date).all()
 
         data = [c.as_dict() for c in all_available_courses]
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 422bb86c162a1f366fc8349a67c752c6ccfc937d
         return {
             "version": api_version,
             "message": "Get all courses",
@@ -196,3 +209,19 @@ class CoursesList(Resource):
             "message": "Check data input",
             "data": {}
         }, 404
+    
+class CoursesFilterList(Resource):
+    """Return a list of courses\n
+    return {message} and {data} 
+    """
+    def get(self, months):
+        today_date = datetime.datetime.now().date()
+        filter_months = months.split(',')
+        all_available_courses = Course.query.filter(Course.sale_end >= today_date).filter(func.MONTH(Course.lesson_start).in_(filter_months)).all()
+        data = [c.as_dict() for c in all_available_courses]
+
+        return {
+            "version": api_version,
+            "message": "Get all courses filtered ",
+            "data": data
+        }, 200
