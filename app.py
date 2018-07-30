@@ -17,10 +17,6 @@ from populate_db import populate_db_roles, populate_db_users, \
 app = Flask(__name__, static_folder="./client/static", template_folder="./client")
 app.config["DEBUG"] = True
 app.config["SECRET_KEY"] = "super-secret"
-# app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root@localhost/localwarehouse"
-# app.config["SQLALCHEMY_BINDS "] = {
-#     "warehouse_tw": "mysql://brianchien:V99PlgLd9RVh9RxV@10.4.211.50/warehouse_tw"
-# }
 app.config["SECURITY_PASSWORD_HASH"] = "pbkdf2_sha512"
 app.config["SECURITY_PASSWORD_SALT"] = "wwefafvbdmyumdhngfrdefrthyjukmi"
 app.config["SECURITY_LOGIN_URL"] = "/flask-login"
